@@ -1,4 +1,4 @@
-#include "charClass.h"
+#include "CharClass.h"
 #include <string>
 #include <vector>
 #include <sstream>
@@ -7,6 +7,33 @@
 #include <memory>
 #include <list>
 
-charClass::charClass() {
+CharClass::CharClass() : level(1), charClass(""), experience(0)
+{
 
 }
+
+CharClass::CharClass(string _charClass) : charClass(_charClass)
+{
+
+}
+
+//setters
+
+//getters
+int CharClass::getLevel() {
+	return level;
+}
+
+int CharClass::getExperience() {
+	return experience;
+}
+
+int CharClass::getNextLevelExp() {
+	return nextLevelExp;
+}
+
+/*
+void CharClass::initClassInfo() {
+
+}
+*/

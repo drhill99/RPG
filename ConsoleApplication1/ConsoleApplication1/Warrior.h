@@ -14,11 +14,10 @@ using namespace std;
 class Warrior : public Character 
 {
 private:
-	int maxHealth = 20;
-	int curHealth = 20;
-	int level = 1;
+	
 	
 public:
+	int level = 1;
 	Warrior();
 
 	void levelUp();

@@ -9,7 +9,7 @@
 
 using namespace std;
 
-Warrior::Warrior() : maxHealth(), curHealth(), level()
+Warrior::Warrior() :  level(1)
 {
 
 }

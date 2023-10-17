@@ -9,23 +9,47 @@
 #include <memory>
 #include <list>
 
+#ifndef CHARACTER_H
+#define CHARACTER_H
 using namespace std;
 
 class Character
 {
 private:
-	string name;
-	string _charClass;
-	int experience;
+	string charName;
+	string charClass;
+	shared_ptr<CharClass> char_Class;
+	int maxHealth = 20;
+	int curHealth = 20;
 	shared_ptr<Inventory> inventory;
 	list<string> equippedGear;
 public:
 	Character();
 
-	void setClass();
-	int getExperience();
+	void initCharInfo(string name, string charClass);
 
+	// getters
+
+	string getName();
+	string getClass();
+	int getCurHealth();
+	int getMaxHealth();
+	int getLevel();
+	int getExperience();
+	int getNextLevelExp();
+	void displayCharacterInfo();
+
+	
+	
+	// setters
+	void chooseClass(string _charClass);
+	void takeDamage(int damage);
+	
+	void recvHealing(int healing);
+	
+
+	
 
 
 };
-
+#endif
